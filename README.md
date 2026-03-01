@@ -48,10 +48,51 @@ El sistema se compone de tres subsistemas principales:
 
 ## 🚫 Restricciones de Diseño
 
-- No se permite el uso de Raspberry Pi
-- No se permite el uso de redes de comunicación para generar alertas
-- El sistema debe operar de manera completamente autónoma
-- Las alertas deben ser exclusivamente físicas y visuales (in situ)
+🔌 1️⃣ Restricción Energética
+
+El sistema no es completamente autónomo, ya que requiere alimentación externa mediante conexión a toma corriente (5V vía USB para el Arduino Uno).
+No se implementó sistema de baterías ni gestión energética debido a limitaciones de tiempo y alcance del reto.
+
+⏳ 2️⃣ Restricción Temporal
+
+El desarrollo estuvo condicionado por la disponibilidad de componentes electrónicos.
+Algunos sensores especializados provienen de proveedores internacionales (principalmente China), lo cual implica tiempos de envío prolongados que podían afectar la planificación del proyecto.
+Por esta razón, se seleccionaron componentes disponibles localmente o con tiempos de entrega garantizados dentro del cronograma académico.
+
+💰 3️⃣ Restricción Económica
+
+Aunque el reto establece un sistema de “bajo costo” (referencia < 100 USD), el equipo se impuso una meta más exigente: mantener el costo total del prototipo por debajo de 50 USD.
+
+Esta decisión influyó en:
+
+La selección del microcontrolador (Arduino Uno)
+
+La elección de sensores comerciales de bajo costo (MQ135, BME280)
+
+La no inclusión de módulos de comunicación inalámbrica
+
+📐 4️⃣ Restricción de Espacio
+
+El sistema debía mantenerse compacto y funcional.
+El montaje se realizó utilizando un Arduino Uno y una protoboard pequeña, lo que impuso limitaciones en:
+
+Distribución de conexiones
+
+Organización del cableado
+
+Gestión térmica y estabilidad mecánica
+
+El tamaño mínimo del sistema corresponde al conjunto Arduino + protoboard, lo cual condiciona futuras posibilidades de miniaturización.
+
+📡 5️⃣ Restricción Funcional del Reto
+
+Por lineamientos del proyecto académico:
+
+No se permite el uso de Raspberry Pi
+
+No se permite el uso de redes de comunicación para alertas
+
+Las notificaciones deben ser exclusivamente in situ (visual y sonora)
 
 ---
 
